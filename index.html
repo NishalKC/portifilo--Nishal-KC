@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfilo - Nishal KC</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+    <div class="home" id="home">
+        <nav>
+            <div class="left">
+                <h1>Nishal KC</h1>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+                
+        </nav>
+        <div class="body">
+            <div class="left">
+                <h1>Hi There, I'm <b>Nishal KC</b></h1>
+                <p>
+                    Hi, I'm Nishal KC — a passionate young developer
+                     and tech explorer from Dang. I'm currently in grade 9 at 
+                     Rapti Southern E.B. School. I love diving into the worlds
+                      of AI, game development and web development. With a creative mind and a strong will, I'm always learning and building new things to turn ideas into reality!
+                    </p>
+                    
+                <button type="button"><a href="">Hire me</a></button>
+            </div>
+            <div class="right">
+                <img src="hero.jpeg" alt="Nishal KC">
+        </div>
+    </div>
+    <div class="projects" id="projects">
+        <h1>Projects</h1>
+        <div class="project">
+            <div class="img">
+                <img src="cart.png" alt="Project 1">
+            </div>
+            <div class="text">
+
+                <h2>Shoping cart</h2>
+                <p>
+                    The Shopping Cart project features a responsive and user-friendly frontend built with HTML, CSS, and JavaScript. It allows users to browse items, add them to the cart, view cart details, and update item quantities in real-time. The design is clean and modern, ensuring a smooth shopping experience.
+                    </p>
+                    
+            </div>
+        </div>
+        <div class="project">
+            <div class="img">
+                <img src="spotify.png" alt="Project 1">
+            </div>
+            <div class="text">
+
+                <h2>Spotify clone </h2>
+                <p>
+                    The Spotify Clone project is a modern, responsive music player interface built using HTML, CSS, and JavaScript. It features a sleek UI that mimics the core design of Spotify, including a sidebar, playback controls, playlists, and a dynamic song list. Users can play/pause tracks, navigate through songs, and enjoy an interactive music experience.
+                    </p>
+                    
+            </div>
+        </div>
+        <div class="project">
+            <div class="img">
+                <img src="calculator.png" alt="Project 1">
+            </div>
+            <div class="text">
+
+                <h2>Calculator </h2>
+                <p>
+                    The Calculator project is a basic yet functional web app built using HTML, CSS, and JavaScript. It supports standard arithmetic operations like addition, subtraction, multiplication, and division. The user interface is clean and responsive, designed for both desktop and mobile devices.
+                    </p>                    
+            </div>
+        </div>
+    </div>
+    <h1>My skills</h1>
+    <div id="skills">
+        
+        <div class="skill">
+            <img src="html.png" alt="">
+            <h2>HTML</h2>
+        </div>
+        <div class="skill">
+            <img src="css.svg" alt="">
+            <h2>CSS</h2>
+        </div>
+        <div class="skill">
+            <img src="js.png" alt="">
+            <h2>JavaScript</h2>
+        </div>
+        <div class="skill">
+            <img src="react.png" alt="">
+            <h2>React</h2>
+        </div>
+        <div class="skill">
+            <img src="py.png" alt="">
+            <h2>Python</h2>
+        </div>
+        <div class="skill">
+            <img src="vs.jpeg" alt="">
+            <h2>VS code</h2>
+        </div>
+    </div>
+    
+  <div id="contact">
+    <h1>Contact Me</h1>
+    <div class="input">
+      <input type="text" id="name" placeholder="Your Name" />
+      <input type="email" id="email" placeholder="Your Email" />
+      <textarea id="message" placeholder="Your Message"></textarea>
+      <button onclick="sendEmail()">Send Message</button>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Nishal KC. All rights reserved. | Made with ❤️ by Nishal</p>
+    <br>
+    <div>
+            <h6>follow me</h6>
+        <a href="https://www.instagram.com/kcnishal954/" target="_blank" style="color: white; text-decoration: none; margin: 0 10px;">Instagram</a>
+        <a href="https://www.facebook.com/CodeWithNishal/" target="_blank" style="color: white; text-decoration: none; margin: 0 10px;">Facebook</a>
+    </div>
+</footer>
+ 
+    <script>
+        (function () {
+  emailjs.init("W50dUFRmrypXDOo2t"); // Using your public key
+})();
+
+function sendEmail() {
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  if (!name || !email || !message) {
+    alert("Please fill in all fields.");
+    return;
+  }
+
+  emailjs.send("service_mejalgy", "template_c0juyqa", {
+    from_name: name,
+    from_email: email,
+    message: message,
+  })
+  .then(
+    () => {
+      alert("Message sent successfully!");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    },
+    (error) => {
+      alert("Failed to send message. Try again.");
+      console.error(error);
+    }
+  );
+}
+
+    </script>
+
+        
+</body>
+</html>
