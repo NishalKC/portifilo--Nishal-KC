@@ -305,6 +305,9 @@ footer h6{
     margin: 0 10px;
     color: #fff;
 }
+html{
+    scroll-behavior: smooth;
+}
 a{
     text-decoration: none;
     color: #fff;
