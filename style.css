@@ -70,6 +70,7 @@ nav ul li:hover{
 }
 .body:hover{
     transform: translateY(5px);
+    background: rgba(106, 116, 89, 0.4);
 }
 .body .left{
     flex-basis: 50%;
@@ -154,7 +155,8 @@ nav ul li:hover{
     cursor: pointer;
 }
 .projects .project:hover{
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    background: rgba(106, 116, 89, 0.4);
 }
 .projects .project .img{
     flex-basis: 30%;
@@ -219,7 +221,6 @@ h1{
     margin-top: 35px;
     flex-basis: 20%;
     margin-right: 15px;
-    
     margin-left: 16px;
     background: lightgoldenrodyellow;
     box-shadow: 2px 7px 10px rgba(0,0,0,1);
@@ -235,7 +236,7 @@ h1{
 #skills .skill h2{
     font-size: 20px;
     color: #333;
-    font-weight: 100;
+    font-weight: 400;
     margin-top: 4px;
     position: absolute;
     transition: 0.5s;
@@ -244,7 +245,7 @@ h1{
 #skills .skill:hover h2{
     transform: translateY(32px);
     opacity: 1;
-    font-weight: 100;
+    font-size: 19px;
     
 }
 #contact{
@@ -263,6 +264,8 @@ h1{
 }
 #contact:hover{
     transform: translateY(-29px);
+    background: rgba(106, 116, 89, 0.4);
+    box-shadow: 2px 7px 9px rgba(0,0,0,1);
 }
 #contact h1{
     font-size: 43px;
@@ -413,7 +416,7 @@ footer a:hover{
     }
     .body .left p{
         font-size: 10px;
-        line-height: 1.5vh;
+        line-height: 1.9vh;
         color: #333;
         margin-top: 10px;
         margin-bottom: 11px;
@@ -440,11 +443,17 @@ footer a:hover{
         margin-left: 7%;
     }
     .body .right img{
-        width: 128%;
+        width: 102%;
         height: 50%;
         border-radius: 50%;
         box-shadow: 2px 7px 10px rgba(0,0,0,1);
         background-size: cover;
+        transition: 0.5s;
+    }
+    .body .right img:hover{
+        transform: translateY(-16px);
+        width: 100%;
+;
     }
     .projects{
         margin-top: 4%;
@@ -548,6 +557,9 @@ footer a:hover{
         border-radius: 15px;  
         margin-bottom: 23px;  
     }   
+    #skills .skill:hover h2{
+        font-size: 12px;
+    }
     #contact{
         margin-top: 0;
         margin-bottom: 16px;
@@ -634,6 +646,8 @@ footer a:hover{
         font-size: 10px;
         margin: 0 10px;
         transition: 0.5s;
+        padding: 2px 3px;
+        border-radius: 12px;
     }
     footer a:hover{
         color: #f0f0f0;
